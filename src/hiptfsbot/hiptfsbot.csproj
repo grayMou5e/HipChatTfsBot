@@ -140,8 +140,8 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj">
-      <Project>{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}</Project>
+    <ProjectReference Include="..\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj">
+      <Project>{e9b818c7-2ba0-43f8-80dc-f9bc24616c78}</Project>
       <Name>HipChat.TfsBot.Domain</Name>
     </ProjectReference>
   </ItemGroup>

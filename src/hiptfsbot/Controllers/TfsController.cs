@@ -1,36 +1,49 @@
 ﻿using HipChat.TfsBot.Domain.ChatOptions;
 using HipChat.TfsBot.Domain.DTO;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+using HipChat.TfsBot.Domain.Entities;
+using HipChat.TfsBot.Domain.Handlers;
+using HipChat.TfsBot.Domain.TfsMessageBuilders;
 using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace hiptfsbot.Controllers
 {
+    [RoutePrefix("api/Tfs")]
     public class TfsController : ApiController
     {
         [HttpPost]
+        [Route("pullRequest", Name = "PullRequest")]
         public async Task<IHttpActionResult> PullRequest([FromUri]int id, [FromBody]PullRequest pullRequest)
         {
-            var request = new HttpRequestMessage()
+            var message = HipChatMessage.Create(Color.blue, pullRequest.detailedMessage.html, true, MessageFormat.html);
+
+            return await SendStandartRequest(message)
+                            .ConfigureAwait(false);
+        }
+
+        [HttpPost]
+        [Route("pullRequestUpdated", Name = "PullRequestUpdated")]
+        public async Task<IHttpActionResult> PullRequestUpdated([FromUri]int id, [FromBody]PullRequest pullRequest)
+        {
+            var message = HipChatMessage.Create(pullRequest.detailedMessage.html, false, MessageFormat.html, new PullRequestUpdateMessageBuilder());
+
+            return await SendStandartRequest(message)
+                            .ConfigureAwait(false);
+
+        }
+
+        private async Task<IHttpActionResult> SendStandartRequest(HipChatMessage message)
+        {
+            try
             {
-                RequestUri = new Uri("https://vp-wolfpack.hipchat.com/v2/room/3580924/notification?auth_token=jejjmkh5qysDkb9cCPn4q4UurMWDxhOlj9Di9WQ2"),
-                Method = HttpMethod.Post,
-                Content = new StringContent(JsonConvert.SerializeObject(
-                    new { color = Color.red.ToString(), message = pullRequest.detailedMessage.html, notify = true, message_format = MessageFormat.html.ToString()}),
-                    System.Text.Encoding.UTF8, 
-                    "application/json")
-
-            };
-
-            var client = new HttpClient();
-            var result = await client.SendAsync(request);
-
-            return Ok();
+                await message.SendAsync(new RequestHandler("https://vp-wolfpack.hipchat.com/v2/room/3580924/notification?auth_token=jejjmkh5qysDkb9cCPn4q4UurMWDxhOlj9Di9WQ2"))
+                    .ConfigureAwait(false);
+                return Ok();
+            }
+            catch
+            {
+                return InternalServerError();
+            }
         }
     }
 }
