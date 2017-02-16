@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hiptfsbot", "src\hiptfsbot\hiptfsbot.csproj", "{97722B6A-9E5E-4E98-AC76-47631E01F05A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChat.TfsBot.Domain", "HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj", "{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChat.TfsBot.Domain", "src\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj", "{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
