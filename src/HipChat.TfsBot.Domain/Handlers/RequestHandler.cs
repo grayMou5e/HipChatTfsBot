@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HipChat.TfsBot.Domain.ChatOptions;
@@ -25,7 +23,7 @@ namespace HipChat.TfsBot.Domain.Handlers
                 RequestUri = _url,
                 Method = HttpMethod.Post,
                 Content = new StringContent(
-                    JsonConvert.SerializeObject(new { color = color.ToString(), message = message, message_format = messageFormat.ToString() }),
+                    JsonConvert.SerializeObject(new { color = color.ToString(), message = message, message_format = messageFormat.ToString(), notify = notify }),
                     Encoding.UTF8,
                     "application/json")
             };

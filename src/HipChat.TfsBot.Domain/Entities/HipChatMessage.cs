@@ -1,8 +1,6 @@
 ﻿using HipChat.TfsBot.Domain.ChatOptions;
 using HipChat.TfsBot.Domain.Handlers;
 using HipChat.TfsBot.Domain.TfsMessageBuilders;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System.Threading.Tasks;
 
 namespace HipChat.TfsBot.Domain.Entities

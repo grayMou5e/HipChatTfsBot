@@ -15,7 +15,7 @@ namespace hiptfsbot.Controllers
         [Route("pullRequest", Name = "PullRequest")]
         public async Task<IHttpActionResult> PullRequest([FromUri]int id, [FromBody]PullRequest pullRequest)
         {
-            var message = HipChatMessage.Create(Color.blue, pullRequest.detailedMessage.html, true, MessageFormat.html);
+            var message = HipChatMessage.Create(Color.purple, pullRequest.detailedMessage.html, true, MessageFormat.html);
 
             return await SendStandartRequest(message)
                             .ConfigureAwait(false);
