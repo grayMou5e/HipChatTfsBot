@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hiptfsbot", "src\hiptfsbot\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChat.TfsBot.Domain", "src\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj", "{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChat.TfsBot.DataAccess", "HipChat.TfsBot.DataAccess\HipChat.TfsBot.DataAccess.csproj", "{C3DF7A15-8340-4443-A995-1648B5272A6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
