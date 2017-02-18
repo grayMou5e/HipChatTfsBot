@@ -5,6 +5,6 @@ namespace HipChat.TfsBot.Domain.TfsMessageBuilders
 {
     public interface ITfsMessageBuilder
     {
-        HipChatMessage Create(string message, bool notify, MessageFormat format);
+        HipChatMessage Create();
     }
 }

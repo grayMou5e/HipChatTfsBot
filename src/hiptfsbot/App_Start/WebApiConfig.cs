@@ -13,7 +13,7 @@ namespace hiptfsbot
 
             config.Routes.MapHttpRoute(
                 name: "HipChatTfsBot",
-                routeTemplate: "api/",
+                routeTemplate: "",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

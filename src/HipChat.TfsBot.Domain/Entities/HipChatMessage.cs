@@ -33,9 +33,9 @@ namespace HipChat.TfsBot.Domain.Entities
             return new HipChatMessage(color, message, notify, messageFormat);
         }
 
-        public static HipChatMessage Create(string message, bool notify, MessageFormat messageFormat, ITfsMessageBuilder builder)
+        public static HipChatMessage Create(ITfsMessageBuilder builder)
         {
-            return builder.Create(message, notify, messageFormat);
+            return builder.Create();
         }
 
         public async Task SendAsync(IRequestHandler handler)
