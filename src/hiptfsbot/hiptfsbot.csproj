@@ -141,6 +141,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\HipChat.TfsBot.DataAccess\HipChat.TfsBot.DataAccess.csproj">
+      <Project>{C3DF7A15-8340-4443-A995-1648B5272A6A}</Project>
+      <Name>HipChat.TfsBot.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj">
       <Project>{e9b818c7-2ba0-43f8-80dc-f9bc24616c78}</Project>
       <Name>HipChat.TfsBot.Domain</Name>

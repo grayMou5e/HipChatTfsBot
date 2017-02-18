@@ -65,6 +65,7 @@
     <Compile Include="DTO\Reviewer.cs" />
     <Compile Include="DTO\Web.cs" />
     <Compile Include="Entities\HipChatMessage.cs" />
+    <Compile Include="Entities\Room.cs" />
     <Compile Include="Handlers\RequestHandler.cs" />
     <Compile Include="TfsMessageBuilders\ITfsMessageBuilder.cs" />
     <Compile Include="Handlers\IRequestHandler.cs" />
