@@ -8,13 +8,13 @@ namespace HipChat.TfsBot.Domain.Entities
 {
     public class HipChatMessage
     {
-        public Color NotificationColor { get; private set; }
+        public Color NotificationColor { get; }
 
-        public string Message { get; private set; }
+        public string Message { get; }
 
-        public bool Notify { get; private set; }
+        public bool Notify { get; }
 
-        public MessageFormat MessageFormat { get; private set; }
+        public MessageFormat MessageFormat { get; }
 
         private HipChatMessage(Color color, string message, bool notify, MessageFormat messageFormat)
         {
