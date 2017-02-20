@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hiptfsbot", "src\hiptfsbot\hiptfsbot.csproj", "{97722B6A-9E5E-4E98-AC76-47631E01F05A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChat.TfsBot.Domain", "src\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj", "{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChat.TfsBot.WebApi", "src\HipChat.TfsBot.WebApi\HipChat.TfsBot.WebApi.csproj", "{FF31CD29-1600-4E3B-BCE6-67B888A8B6B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChat.TfsBot.DataAccess", "src\HipChat.TfsBot.DataAccess\HipChat.TfsBot.DataAccess.csproj", "{C3DF7A15-8340-4443-A995-1648B5272A6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97722B6A-9E5E-4E98-AC76-47631E01F05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97722B6A-9E5E-4E98-AC76-47631E01F05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97722B6A-9E5E-4E98-AC76-47631E01F05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97722B6A-9E5E-4E98-AC76-47631E01F05A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF31CD29-1600-4E3B-BCE6-67B888A8B6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF31CD29-1600-4E3B-BCE6-67B888A8B6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF31CD29-1600-4E3B-BCE6-67B888A8B6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF31CD29-1600-4E3B-BCE6-67B888A8B6B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DF7A15-8340-4443-A995-1648B5272A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

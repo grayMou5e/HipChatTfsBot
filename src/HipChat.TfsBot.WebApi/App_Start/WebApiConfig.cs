@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace hiptfsbot
+namespace HipChat.TfsBot.WebApi
 {
     public static class WebApiConfig
     {

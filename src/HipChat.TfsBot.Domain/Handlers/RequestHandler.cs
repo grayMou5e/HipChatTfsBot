@@ -17,7 +17,6 @@ namespace HipChat.TfsBot.Domain.Handlers
 
         public async Task SendAsync(Color color, string message, bool notify, MessageFormat messageFormat)
         {
-
             var request = new HttpRequestMessage()
             {
                 RequestUri = _url,
