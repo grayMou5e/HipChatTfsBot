@@ -1,8 +1,6 @@
 ﻿using HipChat.TfsBot.Domain.Entities;
-using HipChat.TfsBot.Domain.Extensions;
 using System;
 using System.Data.SqlClient;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HipChat.TfsBot.DataAccess.Clients
@@ -50,13 +48,11 @@ namespace HipChat.TfsBot.DataAccess.Clients
                     if (!result.HasRows) return null;
 
                     result.Read();
-                    return new Room
-                    {
-                        Id = (Guid)result.GetValue(0),
-                        RoomId = (int)result.GetValue(1),
-                        AuthToken = (string)result.GetValue(2),
-                        Secret = (string)result.GetValue(3),
-                    };
+                    return Room.CreateWithHashedSecret(
+                        (Guid)result.GetValue(0),
+                        (int)result.GetValue(1),
+                        (string)result.GetValue(2),
+                        (string)result.GetValue(3));
                 }
             }
         }
