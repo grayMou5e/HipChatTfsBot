@@ -1,6 +1,9 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
 
-namespace hiptfsbot
+namespace HipChat.TfsBot.WebApi
 {
     public static class WebApiConfig
     {

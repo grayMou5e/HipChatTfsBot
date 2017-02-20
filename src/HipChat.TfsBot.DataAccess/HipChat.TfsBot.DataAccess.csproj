@@ -44,7 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj">
+    <ProjectReference Include="..\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj">
       <Project>{E9B818C7-2BA0-43F8-80DC-F9BC24616C78}</Project>
       <Name>HipChat.TfsBot.Domain</Name>
     </ProjectReference>
