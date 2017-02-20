@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Clients\RoomClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SqlScripts\CreateDatabase.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HipChat.TfsBot.Domain\HipChat.TfsBot.Domain.csproj">
