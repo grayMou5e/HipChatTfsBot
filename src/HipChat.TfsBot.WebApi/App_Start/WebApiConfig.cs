@@ -12,7 +12,7 @@ namespace HipChat.TfsBot.WebApi
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "HipChatTfsBot",
+                name: "jarvis",
                 routeTemplate: "",
                 defaults: new { id = RouteParameter.Optional }
             );

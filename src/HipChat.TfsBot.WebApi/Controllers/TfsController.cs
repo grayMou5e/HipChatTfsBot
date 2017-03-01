@@ -18,23 +18,24 @@ namespace HipChat.TfsBot.WebApi.Controllers
 
         [HttpPost]
         [Route("pullRequest", Name = "PullRequest")]
-        public async Task<IHttpActionResult> PullRequest([FromUri]Guid id, [FromUri]string secret, [FromBody]PullRequest pullRequest)
+        public async Task<IHttpActionResult> PullRequest([FromUri]Guid roomId, [FromUri]string secret, [FromBody]PullRequest pullRequest)
         {
             if (!ModelState.IsValid) return BadRequest();
+            if (pullRequest == null) return BadRequest("Please pass pull request object");
 
             var message = HipChatMessage.Create(Color.purple, pullRequest.detailedMessage.html, true, MessageFormat.html);
 
-            return await SendStandartRequest(id, secret, message)
+            return await SendStandartRequest(roomId, secret, message)
                             .ConfigureAwait(false);
         }
 
         [HttpPost]
         [Route("pullRequestUpdated", Name = "PullRequestUpdated")]
-        public async Task<IHttpActionResult> PullRequestUpdated([FromUri]Guid id, [FromUri]string secret, [FromBody]PullRequest pullRequest)
+        public async Task<IHttpActionResult> PullRequestUpdated([FromUri]Guid roomId, [FromUri]string secret, [FromBody]PullRequest pullRequest)
         {
             if (!ModelState.IsValid) return BadRequest();
 
-            var message = HipChatMessage.Create(new PullRequestUpdateMessageBuilder(pullRequest.detailedMessage.html));
+            var message = HipChatMessage.Create(new PullRequestUpdateMessageBuilder(pullRequest));
 
             return await SendStandartRequest(id, secret, message)
                             .ConfigureAwait(false);
